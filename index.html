@@ -1,77 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Cool Pics - Responsive Gallery" />
-  <meta name="author" content="Sydney Solomon" />
-  <title>📷 Cool Pics</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cool Pics</title>
   <link rel="stylesheet" href="styles.css" />
+  <script src="responsive.js" defer></script>
 </head>
-
 <body>
-  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="top">
+    <h1 class="title">Cool Pics 📷</h1>
 
-  <header class="site-header">
-    <div class="brand">
-      <img class="brand__logo" src="images/norris-sm.jpg" alt="BYU-Idaho logo" />
-      <h1 class="brand__title">📷 Cool Pics</h1>
-    </div>
+    <button id="menuBtn" class="menu-btn" type="button" aria-expanded="false" aria-controls="navLinks">
+      Menu
+    </button>
 
-    <nav class="site-nav" aria-label="Primary navigation">
-      <button class="menu-btn" type="button" aria-label="Menu (disabled in Part 1)">
-        ☰ Menu
-      </button>
-
-      <ul class="nav-links">
+    <nav>
+      <ul id="navLinks" class="nav">
         <li><a href="#">Home</a></li>
-        <li><a href="#">Gallery</a></li>
+        <li><a href="#">People</a></li>
+        <li><a href="#">Places</a></li>
         <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main id="main" class="container">
-    <section class="intro">
-      <h2>Gallery</h2>
-      <p>A responsive gallery layout. Images stay square using <code>object-fit: cover</code>.</p>
-    </section>
+  <main class="wrap">
+    <h2 class="sub">Current Work</h2>
 
-    <section class="gallery" aria-label="Photo gallery">
-      <figure class="card">
-        <img src="images/norris-sm.jpg" alt="Sample photo 1" />
-        <figcaption>Sample Pic 1</figcaption>
-      </figure>
-
-      <figure class="card">
-        <img src="images/norris-sm.jpg" alt="Sample photo 2" />
-        <figcaption>Sample Pic 2</figcaption>
-      </figure>
-
-      <figure class="card">
-        <img src="images/norris-sm.jpg" alt="Sample photo 3" />
-        <figcaption>Sample Pic 3</figcaption>
-      </figure>
-
-      <figure class="card">
-        <img src="images/norris-sm.jpg" alt="Sample photo 4" />
-        <figcaption>Sample Pic 4</figcaption>
-      </figure>
-
-      <figure class="card">
-        <img src="images/norris-sm.jpg" alt="Sample photo 5" />
-        <figcaption>Sample Pic 5</figcaption>
-      </figure>
-
-      <figure class="card">
-        <img src="images/norris-sm.jpg" alt="Sample photo 6" />
-        <figcaption>Sample Pic 6</figcaption>
-      </figure>
+    <section class="gallery">
+      <img src="images/norris-sm.jpg" alt="Norris" class="pic" data-full="images/norris-full.jpg">
+      <img src="images/norris-sm.jpg" alt="Norris" class="pic" data-full="images/norris-full.jpg">
+      <img src="images/norris-sm.jpg" alt="Norris" class="pic" data-full="images/norris-full.jpg">
+      <img src="images/norris-sm.jpg" alt="Norris" class="pic" data-full="images/norris-full.jpg">
+      <img src="images/norris-sm.jpg" alt="Norris" class="pic" data-full="images/norris-full.jpg">
+      <img src="images/norris-sm.jpg" alt="Norris" class="pic" data-full="images/norris-full.jpg">
     </section>
   </main>
 
-  <footer class="site-footer">
-    <p>&copy; 2026 Brigham Young University - Idaho</p>
-  </footer>
+  <div id="modal" class="modal" aria-hidden="true">
+    <div id="backdrop" class="backdrop"></div>
+    <div class="box">
+      <button id="closeBtn" class="close" type="button">X</button>
+      <img id="modalImg" alt="">
+    </div>
+  </div>
 </body>
 </html>
