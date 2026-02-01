@@ -1,50 +1,47 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cool Pics</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
   <script src="responsive.js" defer></script>
 </head>
 <body>
-  <header class="top">
-    <h1 class="title">Cool Pics 📷</h1>
 
-    <button id="menuBtn" class="menu-btn" type="button" aria-expanded="false" aria-controls="navLinks">
-      Menu
-    </button>
+<header class="top">
+  <h1 class="title">Cool Pics 📷</h1>
 
-    <nav>
-      <ul id="navLinks" class="nav">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">People</a></li>
-        <li><a href="#">Places</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <button id="menuBtn" class="menu-btn">Menu</button>
 
-  <main class="wrap">
-    <h2 class="sub">Current Work</h2>
+  <ul id="navLinks" class="nav">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">People</a></li>
+    <li><a href="#">Places</a></li>
+    <li><a href="#">About</a></li>
+  </ul>
+</header>
 
-    <section class="gallery">
-      <img src="images/norris-sm.jpg" alt="Norris" class="pic" data-full="images/norris-full.jpg">
-      <img src="images/norris-sm.jpg" alt="Norris" class="pic" data-full="images/norris-full.jpg">
-      <img src="images/norris-sm.jpg" alt="Norris" class="pic" data-full="images/norris-full.jpg">
-      <img src="images/norris-sm.jpg" alt="Norris" class="pic" data-full="images/norris-full.jpg">
-      <img src="images/norris-sm.jpg" alt="Norris" class="pic" data-full="images/norris-full.jpg">
-      <img src="images/norris-sm.jpg" alt="Norris" class="pic" data-full="images/norris-full.jpg">
-    </section>
-  </main>
+<main class="wrap">
+  <h2 class="sub">Current Work</h2>
 
-  <div id="modal" class="modal" aria-hidden="true">
-    <div id="backdrop" class="backdrop"></div>
-    <div class="box">
-      <button id="closeBtn" class="close" type="button">X</button>
-      <img id="modalImg" alt="">
-    </div>
+  <section class="gallery">
+    <img src="images/norris-sm.jpg" alt="Norris" class="pic">
+    <img src="images/norris-sm.jpg" alt="Norris" class="pic">
+    <img src="images/norris-sm.jpg" alt="Norris" class="pic">
+    <img src="images/norris-sm.jpg" alt="Norris" class="pic">
+    <img src="images/norris-sm.jpg" alt="Norris" class="pic">
+    <img src="images/norris-sm.jpg" alt="Norris" class="pic">
+  </section>
+</main>
+
+<div id="modal" class="modal">
+  <div id="backdrop" class="backdrop"></div>
+  <div class="box">
+    <button id="closeBtn" class="close">X</button>
+    <img id="modalImg" alt="">
   </div>
+</div>
+
 </body>
 </html>

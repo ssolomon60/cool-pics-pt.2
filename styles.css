@@ -7,111 +7,109 @@ body {
   color: #111;
 }
 
-img { display: block; width: 100%; height: auto; }
+img { display: block; width: 100%; }
 
 .top {
   background: #3081dc;
-  color: #fff;
+  color: white;
   padding: 1rem;
   text-align: center;
 }
 
-.title {
-  margin: 0;
-  font-size: 2rem;
-}
+.title { margin: 0; }
 
 .menu-btn {
-  margin: .75rem auto 0;
-  padding: .45rem .75rem;
-  border: 1px solid rgba(255,255,255,.7);
+  margin-top: .5rem;
+  padding: .4rem .7rem;
+  border: 1px solid white;
   background: transparent;
-  color: #fff;
-  border-radius: .4rem;
+  color: white;
   cursor: pointer;
 }
 
 .nav {
   list-style: none;
-  margin: .75rem 0 0;
   padding: 0;
+  margin: .5rem 0 0;
   display: none;
-  gap: .5rem;
-  justify-content: center;
 }
 
-.nav.open { display: grid; }
+.nav.open { display: block; }
 
 .nav a {
-  color: #fff;
+  color: white;
   text-decoration: none;
-  padding: .25rem .5rem;
+  display: block;
+  padding: .25rem;
 }
 
 .wrap {
-  max-width: 950px;
-  margin: 0 auto;
+  max-width: 900px;
+  margin: auto;
   padding: 1rem;
 }
 
-.sub {
-  margin: .75rem 0 1rem;
-  text-align: center;
-  font-size: 1.3rem;
-}
+.sub { text-align: center; }
 
 .gallery {
   display: grid;
-  gap: 1.25rem;
-  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+  grid-template-columns: 1fr;
   justify-items: center;
 }
 
 .pic {
-  width: min(320px, 90vw);
-  height: 220px;
+  width: 300px;
+  height: 200px;
   object-fit: cover;
-  background: #fff;
+  background: white;
   padding: .5rem;
   border: 2px solid #eee;
-  box-shadow: 0 6px 12px rgba(0,0,0,.25);
   cursor: pointer;
 }
 
 @media (min-width: 700px) {
   .menu-btn { display: none; }
-  .nav { display: flex; }
+  .nav { display: flex; justify-content: center; gap: 1rem; }
   .gallery { grid-template-columns: repeat(3, 1fr); }
-  .pic { width: 100%; height: 210px; }
+  .pic { width: 100%; }
 }
 
-.modal { position: fixed; inset: 0; display: none; z-index: 999; }
-.modal.open { display: grid; place-items: center; }
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+}
 
-.backdrop { position: absolute; inset: 0; background: rgba(0,0,0,.75); }
+.modal.open {
+  display: grid;
+  place-items: center;
+}
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.75);
+}
 
 .box {
   position: relative;
-  z-index: 1;
-  background: transparent;
-  padding: 0;
-  max-width: 92vw;
-  max-height: 88vh;
+  background: white;
+  padding: 1rem;
+  max-width: 90vw;
+  max-height: 90vh;
 }
 
 #modalImg {
-  max-width: 92vw;
-  max-height: 88vh;
-  border: 6px solid #fff;
+  max-width: 85vw;
+  max-height: 80vh;
 }
 
 .close {
   position: absolute;
-  top: -12px;
-  right: -12px;
-  width: 38px;
-  height: 38px;
-  border: none;
-  border-radius: 50%;
+  top: 5px;
+  right: 5px;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
 }
